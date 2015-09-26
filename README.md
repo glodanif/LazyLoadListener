@@ -1,5 +1,5 @@
 # LazyLoadListener
-Implementation of AbsListView.OnScrollListener which generates event when last item of list is reached. Will help to work with common pagination approach with limit and offset
+Implementation of `AbsListView.OnScrollListener` which generates event when last item of list is reached. This implementation will help to work with common pagination approach with *limit* and *offset* values
 
 ## Common pagination
 It's common aproach to use *limit* and *offset* to implement pagination
