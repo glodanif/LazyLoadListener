@@ -10,6 +10,8 @@ It's common aproach to use *limit* and *offset* to implement pagination
 
 ## Usage
 
+### 0. Check sample
+
 ### 1. Instantiate LazyLoadListener
 LazyLoadListener has two constructors:
 
