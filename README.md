@@ -1,8 +1,8 @@
 # LazyLoadListener
-Implementation of `AbsListView.OnScrollListener` which generates event when last item of list is reached. This implementation will help to work with common pagination approach with *limit* and *offset* values
+Implementation of `AbsListView.OnScrollListener` and `RecyclerView.OnScrollListener` which generates event when last item of list is reached. This implementation will help to work with common pagination approach with *limit* and *offset* values
 
 ## Common pagination
-It's common aproach to use *limit* and *offset* to implement pagination
+It's a common approach to use *limit* and *offset* to implement pagination
 
 *offset* - offset of the first record returned
 
@@ -12,14 +12,14 @@ It's common aproach to use *limit* and *offset* to implement pagination
 
 ### 0. Check sample
 
-### 1. Instantiate LazyLoadListener
-LazyLoadListener has two constructors:
+### 1. Instantiate LVLLOnScrollListener (or RVLLOnScrollListener)
+LVLLOnScrollListener has two constructors:
 
-`LazyLoadOnScrollListener(int bunchSize)` - `bunchSize` is *limit*
+`LVLLOnScrollListener(int bunchSize)` - `bunchSize` is *limit*
 
-`LazyLoadOnScrollListener(int bunchSize, int startLoadOffset)` - *limit* and offset from bottom, for example if `startLoadOffset` = 5 and your list contains 20 items, onLoad event will be called when you reach 15th item. 
+`LVLLOnScrollListener(int bunchSize, int startLoadOffset)` - *limit* and offset from bottom, for example if `startLoadOffset` = 5 and your list contains 20 items, onLoad event will be called when you reach 15th item.
 
-`LazyLoadOnScrollListener` is abstract class, you have to implement one method - `onLoad(int offset)`.
+`LVLLOnScrollListener` is abstract class, you have to implement one method - `onLoad(int offset)`.
 
 don't forget to apply this listener to your `ListView`: 
 

@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 
-import com.g.lazyloadlistener.LazyLoadOnScrollListener;
+import com.g.lazyloadlistener.LVLLOnScrollListener;
 import com.g.lazyloadlistenersample.adapters.BooksAdapter;
 import com.g.lazyloadlistenersample.data.Book;
 import com.g.lazyloadlistenersample.service.BooksApiService;
@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    private LazyLoadOnScrollListener listener = new LazyLoadOnScrollListener(BooksApiService.LIMIT) {
+    private LVLLOnScrollListener listener = new LVLLOnScrollListener(BooksApiService.LIMIT) {
         @Override
         public void onLoad(int offset) {
             loadBooks(currentQuery, offset);

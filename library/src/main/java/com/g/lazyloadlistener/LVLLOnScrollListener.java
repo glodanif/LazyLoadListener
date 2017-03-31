@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 Vasyl Glodan
+ * Copyright 2017 Vasyl Glodan
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,7 +18,7 @@ package com.g.lazyloadlistener;
 
 import android.widget.AbsListView;
 
-public abstract class LazyLoadOnScrollListener implements AbsListView.OnScrollListener {
+public abstract class LVLLOnScrollListener implements AbsListView.OnScrollListener {
 
     private int bunchSize;
     private int startLoadOffset;
@@ -28,11 +28,11 @@ public abstract class LazyLoadOnScrollListener implements AbsListView.OnScrollLi
 
     private int loadedCount;
 
-    public LazyLoadOnScrollListener(int bunchSize) {
+    public LVLLOnScrollListener(int bunchSize) {
         this.bunchSize = bunchSize;
     }
 
-    public LazyLoadOnScrollListener(int bunchSize, int startLoadOffset) {
+    public LVLLOnScrollListener(int bunchSize, int startLoadOffset) {
         this.bunchSize = bunchSize;
         this.startLoadOffset = startLoadOffset;
     }
